@@ -22,7 +22,7 @@ public class Task4 {
             System.out.println(res);
         } else {
             res = 420;
-            System.out.println(420);
+            System.out.println(res);
         }
     }
 }
