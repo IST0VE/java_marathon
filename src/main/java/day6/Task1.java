@@ -16,10 +16,7 @@ public class Task1 {
         audi.info();
         kawasaki.info();
 
-        int newYearForAudi = scanner.nextInt();
-        int newYearForKawasaki = scanner.nextInt();
-
-        System.out.println("Разница: " + audi.yearDifference(newYearForAudi));
-        System.out.println("Разница: " + kawasaki.yearDifference(newYearForKawasaki));
+        System.out.println("Разница: " + audi.yearDifference(1920));
+        System.out.println("Разница: " + kawasaki.yearDifference(2020));
     }
 }

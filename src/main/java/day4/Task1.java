@@ -24,7 +24,7 @@ public class Task1 {
         int[] array = new int[n];
 
         for (int i = 0; i < array.length; i++){
-            array[i] = (random.nextInt(10));
+            array[i] = (random.nextInt(9) + 1);
         }
         System.out.println(Arrays.toString(array));
 
@@ -47,20 +47,17 @@ public class Task1 {
         System.out.println("Количество чисел равных 1: " + res);
 
         res = 0;
+        int count = 0;
         for (int k : array) {
             if (k % 2 == 0) {
                 res++;
             }
-        }
-        System.out.println("Количество четных чисел: " + res);
-
-        res = 0;
-        for (int j : array) {
-            if (j % 2 != 0) {
-                res++;
+            else if (k % 2 != 0){
+                count++;
             }
         }
-        System.out.println("Количество нечетных чисел: " + res);
+        System.out.println("Количество четных чисел: " + res);
+        System.out.println("Количество нечетных чисел: " + count);
 
         res = 0;
         for (int j : array) {

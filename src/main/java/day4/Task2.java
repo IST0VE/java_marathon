@@ -17,44 +17,40 @@ public class Task2 {
     public static void main(String[] args) {
         Random random = new Random();
         int[] array = new int[100];
-
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < array.length; i++){
             array[i] = random.nextInt(10000);
         }
         System.out.println(Arrays.toString(array));
 
         int value = 0;
-        int valueLast = 0;
         for (int k : array) {
-            valueLast = k;
-            if (value < valueLast) {
-                value = valueLast;
+            max = k;
+            if (value < max) {
+                value = max;
             }
         }
         System.out.println(value);
 
         value = 100000;
-        valueLast = 0;
         for (int k : array) {
-            valueLast = k;
-            if (value > valueLast) {
-                value = valueLast;
+            min = k;
+            if (value > min) {
+                value = min;
             }
         }
         System.out.println(value);
 
         value = 0;
+        int res = 0;
         for (int j : array) {
-            if (j % 10 == 0)
+            if (j % 10 == 0){
                 value++;
+                res += j;
+            }
         }
         System.out.println(value);
-
-        value = 0;
-        for (int i :array) {
-            if (i % 10 == 0)
-                value += i;
-        }
-        System.out.println(value);
+        System.out.println(res);
     }
 }

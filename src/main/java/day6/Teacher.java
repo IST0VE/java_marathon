@@ -28,9 +28,8 @@ public class Teacher {
         return subjectName;
     }
 
-
+    Random random = new Random();
     public void evaluate(String studentName){
-        Random random = new Random();
         int randomGrade = 2 + random.nextInt(4);
         String grade = "";
         if (randomGrade == 5){

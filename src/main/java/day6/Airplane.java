@@ -12,7 +12,6 @@ public class Airplane {
         this.year = year;
         this.length = length;
         this.weight = weight;
-        fuel = 0;
     }
 
     public void setManufacturer(String manufacturer) {
@@ -44,8 +43,7 @@ public class Airplane {
                 ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    public int fillUp(int n){
+    public void fillUp(int n){
         fuel += n;
-        return fuel;
     }
 }

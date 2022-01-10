@@ -21,9 +21,19 @@ public class Task4 {
         int valueMax = 0;
         int index = 0;
 
+//        for (int i = 0; i < array.length - 2; i++){
+//            valueMax = 0;
+//            valueMax = array[i] + array[i + 1] + array[i + 2];
+//            if (value < valueMax) {
+//                value = valueMax;
+//                index = i;
+//            }
+//        }
         for (int i = 0; i < array.length - 2; i++){
             valueMax = 0;
-            valueMax = array[i] + array[i + 1] + array[i + 2];
+            for(int j = 0; j < 3; j++){
+                valueMax += array[i + j];
+            }
             if (value < valueMax) {
                 value = valueMax;
                 index = i;
