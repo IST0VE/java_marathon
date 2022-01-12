@@ -1,5 +1,7 @@
 package day9.Task2;
 
+import java.util.Objects;
+
 public class TestFigures {
     public static void main(String[] args) {
         Figure[] figures = {
@@ -21,7 +23,7 @@ public class TestFigures {
     public static double calculateRedPerimeter(Figure[] figures) {
         double res = 0;
         for (Figure figure : figures) {
-            if (figure.getColor() == "Red") {
+            if (Objects.equals(figure.getColor(), "Red")) {
                 res += figure.perimeter();
             }
         }
@@ -31,7 +33,7 @@ public class TestFigures {
     public static double calculateRedArea(Figure[] figures) {
         double res = 0;
         for (Figure figure : figures) {
-            if (figure.getColor() == "Red") {
+            if (Objects.equals(figure.getColor(), "Red")) {
                 res += figure.area();
             }
         }
